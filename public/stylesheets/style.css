@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  font-family: Arial;
+}
+
+.form {
+  max-width: 540px;
+  padding: 15px;
+  margin: 0 auto;
+}
+ul.success li, ul.info li, ul.error li{
+  margin: 20px 0 20px 0;
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  list-style: none;
+}
+
+ul.success li {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #b2dba1;
+}
+
+ul.info li {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #9acfea;
+}
+
+ul.error li {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #dca7a7;
+}
+

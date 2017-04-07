@@ -1,0 +1,40 @@
+//
+   Created by Sinner on 20-Mar-17.
+
+extends layout
+
+block content
+
+
+    .form
+        form(method='post', action='/users/register', enctype='multipart/form-data')
+            h1 Register
+            p.lead Please register using the form below
+            ul.errors
+                if errors
+                    each error, i in errors
+                        li.alert.alert-danger #{error.msg}
+            .form-group
+                label Name
+                input.form-control(name='name', type='text', placeholder='Enter Name')
+            .form-group
+                label Email
+                input.form-control(name='email', type='email', placeholder='Enter Email')
+            .form-group
+                label UserName
+                input.form-control(name='username', type='text', placeholder='Enter UserName')
+
+            .form-group
+                label Password
+                input.form-control(name='password', type='password', placeholder='Enter Password')
+
+            .form-group
+                label Confirm Password
+                input.form-control(name='cnfpassword', type='password', placeholder='Confirm Password')
+
+            .form-group
+                label Profile Image
+                input.form-control(name='profileImage', type='file')
+            .btn-group
+                input.btn.btn-primary.btn-lg(name='submit', type='submit', value='Register')
+                input.btn.btn-danger.btn-lg(name='reset', type='reset', value='Reset')

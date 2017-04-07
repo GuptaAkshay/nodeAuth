@@ -1,0 +1,21 @@
+//
+    Created by Sinner on 20-Mar-17.
+
+extends layout
+
+block content
+
+    form.form(method='post', action='/users/login')
+        h1 Login
+        p.lead Please Login below
+        ul.errors
+            if errors
+                each error, i in errors
+                    li.alert.alert-danger #{error.msg}
+        .form-group
+            label UserName
+            input.form-control(name='username', type='text', placeholder='Enter UserName')
+        .form-group
+            label Password
+            input.form-control(name='password', type='password', placeholder='Enter Password')
+        input.btn.btn-primary.btn-lg.btn-block(name='submit', type='submit', value='Login')
